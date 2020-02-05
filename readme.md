@@ -44,9 +44,13 @@ accessTokenSecret = abc123
 
 ## Option to Use Service Name
 
+```js
 let response = lpAPI(method, urlPath, [body], serviceName);
-
-e.g response = lpAPI('GET', '/api/account/${accountId}/configuration/le-users/skills', null, 'accountConfigReadOnly');
+```
+e.g 
+```js
+response = lpAPI('GET', '/api/account/${accountId}/configuration/le-users/skills', null, 'accountConfigReadOnly');
+```
 
 This type of request allows the user to use the API domain's service name and url path instead of the full api url (including domain). 
 
