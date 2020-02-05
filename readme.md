@@ -16,6 +16,7 @@ This type of request requires just the API's method and URL (and an optional bod
 
 If using a constants.js file, accountId and oauth should be stored as below.
 
+```javascript
 const constants = {
     accountId: 12345678,
     oauth: {
@@ -27,16 +28,19 @@ const constants = {
 }
 
 module.exports = {constants};
+```
 
 ### .env
 
 If using a .env file, accountId and oauth parameters should be stored as below.
 
+```bash
 accountId = 12345678
 appKey = 123abc456def
 secret = abc123
 accessToken = 123abc456def
 accessTokenSecret = abc123
+```
 
 ## Option to Use Service Name
 
