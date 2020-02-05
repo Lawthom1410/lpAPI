@@ -1,0 +1,16 @@
+{
+  "name": "lpapi",
+  "version": "1.0.0",
+  "description": "This app tries to delete multiple skills and logs successes and failures in a CSV file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Lawthom",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  }
+}
