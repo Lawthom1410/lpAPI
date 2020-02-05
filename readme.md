@@ -5,10 +5,13 @@ An extensible function that returns the JSON response of most LivePerson API cal
 Can be used in conjunction with constants.js or .env file to further simplify calls.
 
 ## Simple Request
-
+```js
 let response = lpAPI(method, url, [body]);
-
-e.g response = lpAPI('GET', 'https://z2.acr.liveperson.net/api/account/${accountId}/configuration/le-users/skills');
+```
+e.g 
+```js
+let response = lpAPI('GET', 'https://z2.acr.liveperson.net/api/account/${accountId}/configuration/le-users/skills');
+```
 
 This type of request requires just the API's method and URL (and an optional body argument). This can only be used when the accountId and oauth arguments have been stored in a constants.js or .env file as outlined below.
 
@@ -16,7 +19,7 @@ This type of request requires just the API's method and URL (and an optional bod
 
 If using a constants.js file, accountId and oauth should be stored as below.
 
-```javascript
+```js
 const constants = {
     accountId: 12345678,
     oauth: {
@@ -49,7 +52,7 @@ let response = lpAPI(method, urlPath, [body], serviceName);
 ```
 e.g 
 ```js
-response = lpAPI('GET', '/api/account/${accountId}/configuration/le-users/skills', null, 'accountConfigReadOnly');
+let response = lpAPI('GET', '/api/account/${accountId}/configuration/le-users/skills', null, 'accountConfigReadOnly');
 ```
 
 This type of request allows the user to use the API domain's service name and url path instead of the full api url (including domain). 
@@ -57,9 +60,9 @@ This type of request allows the user to use the API domain's service name and ur
 This automates the use of LivePerson's Domain API to retrieve the required domain.
 
 ## Full Request
-
+```js
 let response = lpAPI(method, urlPath, [body], serviceName, accountId, oauth, headers);
-
+```
 This type of request allows full customization of account IDs, oauth arguments, and headers per each request. 
 
 Account IDs and oauth arguments specified here will take priority over ones stored in constants.js or .env files.
